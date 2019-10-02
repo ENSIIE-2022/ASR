@@ -1,0 +1,7 @@
+#Nombre d'utilisateurs connectés :
+users | wc -l
+
+#Le tail affiche tout le contenu au dessus de la 10ème ligne, le head prend les 10 première lignes de ce contenu déjà tronqué par tail. Ce qui nous donne un affichage de la ligne 10 à 20
+tail -n +10 /usr/share/dict/words | head -n 10
+	#En générique ca donne :
+	tail -n +<numero_de_la_ligne_ou_commencer_a_afficher> /usr/share/dict/words | head -n <nombre_de_lignes_à_afficher>

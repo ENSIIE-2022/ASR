@@ -1,0 +1,14 @@
+echo "Mon répertoire de connexion \$HOME est "$HOME
+printf "Le code du caractère * est %d\n" "'*"
+
+#Pour le 3, il faut bien connaitre la mise à l'ombre des caractères, c'est à dire l'utilisation du backslash \
+printf "Le code du caractère \" est %d, celui de \' est %d\n" "'\"" "''"
+
+#On utilise les `` (ALTGR + 7) pour executer des commandes au sein d'une chaine de caractère
+echo "La date est `date`"
+
+#Même principe que le précédant
+echo "La liste des utilisateurs connectés est : `users`"
+
+#wc compte le nombre de mots donnés par la commande `users`
+echo "Le nombre d'utilisateurs connectés est : `users | wc -l`"

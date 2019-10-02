@@ -1,0 +1,5 @@
+Rajouter ca dans ~/.bashrc, elle fait notre nouveau logout + ancien logout :
+	alias logout='clear;echo "Au revoir...";logout'
+
+Puis faire un trap pour trigger notre nouvelle fonction :
+	trap 'logout' EXIT

@@ -1,0 +1,11 @@
+#L'utilisation de s* dit "Affiche dans usr/bin tout les fichiers commencants par s"
+ls /usr/bin/s*
+
+#L'utilisation de ???? montre qu'on peut insérer quatre char 
+ls -d /usr/bin/????
+
+#
+ls /usr/bin | grep "[[:lower:]].*[[:lower:]]"
+
+#
+ls /usr/bin | grep "[[:digit:]]"
