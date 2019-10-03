@@ -1,0 +1,17 @@
+#affichez la liste des véhicules gris du fichier auto
+cat auto | grep 'gris'
+
+#affichez la liste des modèles (2ème champ);
+cat auto | cut -d':' -f2
+
+#affichez par ordre alphanumérique la liste des modèles (2ème champ);
+cat auto | sort -t':' --key=2
+
+#affichez la liste des véhicules de l'année 89;
+cat auto | grep ':89:'
+
+#affichez le nombre de véhicules qui ne sont pas rouges;
+grep -v rouge auto
+
+#triez le fichier.
+cat auto | sort
