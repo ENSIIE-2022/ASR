@@ -1,3 +1,4 @@
+#Lucas NAVETEUR
 #Nombre de requetes faites au serveur
 cat access_log.1 | wc -l
 
@@ -17,4 +18,16 @@ cat access_log.1 | cut -d'"' -f4 | sort | uniq -c | sort -nr | sed -n '2!p'
 cat access_log.1 | cut -d'"' -f6 | sort | uniq -c | sort -n | sed -n '1!p' | wc -l
 
 #Adresses IP de l'extérieur
-cat access_log.1 | cut -d'-' -f1 | sort -u | grep -v '157'
+cat access_log.1 | cut -d'-' -f1 | sort -u | grep -v '^157'
+
+#Partie de Lucas  (Jovenium)
+#wc -l access_log.l
+#sort access_log.1
+#cut -d" " -f1 access_log.1 | sort -u
+#cut -d" " -f1 access_log.1 | sort -u
+#cut -d" " -f1 access_log.1 | sort -u | wc -l
+#cut -d" " -f1 access_log.1 |sort | uniq -c
+#cut -d" " -f 11 access_log.1  | sort | uniq -c | sort -nr | head -1
+#cut -d" " -f 12 access_log.1  | sort | uniq -c | sort -nr | head -1
+#cut -d" " -f1 access_log.1 |sort -u | grep -v '^157.159'
+#>>>>>>> 625d2653ee26c532505dc0247ca64d74755f5a62
