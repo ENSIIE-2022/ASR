@@ -1,0 +1,9 @@
+wc -l access_log.l
+sort access_log.1
+cut -d" " -f1 access_log.1 | sort -u
+cut -d" " -f1 access_log.1 | sort -u
+cut -d" " -f1 access_log.1 | sort -u | wc -l
+cut -d" " -f1 access_log.1 |sort | uniq -c
+cut -d" " -f 11 access_log.1  | sort | uniq -c | sort -nr | head -1
+cut -d" " -f 12 access_log.1  | sort | uniq -c | sort -nr | head -1
+cut -d" " -f1 access_log.1 |sort -u | grep -v '^157.159'
