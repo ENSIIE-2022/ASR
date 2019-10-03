@@ -7,7 +7,7 @@ ls /usr/bin/s*
 ls -d /usr/bin/????
 
 #
-ls /usr/bin | grep "[[:lower:]].*[[:lower:]]"
+ls /usr/bin | grep ".*^[[:lower:]].*^[[:lower:]].*"
 
 #
-ls /usr/bin | grep "[[:digit:]]"
+ls /usr/bin | grep ".*[[:digit:]].*"
