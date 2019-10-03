@@ -1,0 +1,20 @@
+#Nombre de requetes faites au serveur
+cat access_log.1 | wc -l
+
+#Liste des adresses IP + Tri
+cat access_log.1 | cut -d'-' -f1 | sort -u
+
+#Combien de machines différentes se sont connectées au serveur
+cat access_log.1 | cut -d'-' -f1 | sort -u | wc -l
+
+#Nombre de connexions de chaque machine
+cat access_log.1 | cut -d'-' -f1 | sort -n | uniq -c | sort -nr
+
+#Les pages les plus lues, le sed supprime la ligne contenant le lien http '-'
+cat access_log.1 | cut -d'"' -f4 | sort | uniq -c | sort -nr | sed -n '2!p'
+
+#Nombre de navigateurs web différents
+cat access_log.1 | cut -d'"' -f6 | sort | uniq -c | sort -n | sed -n '1!p' | wc -l
+
+#Adresses IP de l'extérieur
+cat access_log.1 | cut -d'-' -f1 | sort -u | grep -v '157'
