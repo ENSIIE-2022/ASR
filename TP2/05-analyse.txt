@@ -1,0 +1,30 @@
+#1
+    #Pas compris la question
+
+    #
+    cat /etc/dictionaries-common/words | grep "^[[:upper:]].*z$" | wc -l
+    #
+    grep -Eo '\<[[:upper:]]+\>' /etc/dictionaries-common/words | wc -l
+
+#Blank user password
+    sudo getent shadow | grep '^[^:]*:.\?:' | cut -d: -f1
+
+#hidden files in /
+    ls -d /.!(|.)
+
+#Sort /etc/group
+    cat /etc/group | sort
+    cat /etc/group | sort -r
+    cat /etc/passwd | sort -t ':' -k 3 -g
+    cat /etc/passwd | sort -t ':' -k 4 -g
+
+#Sort directory by size then ascii
+    ls --sort=size -l
+
+#Sort last connected users (A TESTER)
+    who | sort -t ' ' -k 4
+
+#Lister les directory d'un répertoire
+    ls -d /*/
+#Lister les fichiers (Pas directory) d'un répertoire
+    ls -p | grep -v /
