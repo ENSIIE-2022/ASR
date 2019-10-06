@@ -1,0 +1,7 @@
+#affichez les différents types mime :
+    grep "^\!:mime" magic | sed -r 's/[!:mime]+//g' | tr -d '[:blank:]' | sort -u
+
+#comptez le nombre de type mime différents;
+    grep "^\!:mime" magic | sed -r 's/[!:mime]+//g' | tr -d '[:blank:]' | sort -u | wc -l
+
+#Je ne comprend pas la question
