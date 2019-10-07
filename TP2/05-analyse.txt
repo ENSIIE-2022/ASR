@@ -28,3 +28,12 @@
     ls -d /*/
 #Lister les fichiers (Pas directory) d'un répertoire
     ls -p | grep -v /
+
+#GID 100
+
+#Users non affectés
+    grep "/bin/sh$\|/bin/csh$" /etc/passwd
+
+
+#Résultat du 5.2 en une seule ligne
+    cat /etc/dictionaries-common/words | cut -c 1 | uniq -c | sort -nr
