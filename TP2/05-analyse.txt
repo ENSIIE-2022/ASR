@@ -1,6 +1,6 @@
 #1
-    #Pas compris la question
-
+    #2 char et 2 majs
+    cat /etc/dictionaries-common/words | grep "^..[[:upper:]][[:upper:]]"
     #
     cat /etc/dictionaries-common/words | grep "^[[:upper:]].*z$" | wc -l
     #
@@ -30,6 +30,7 @@
     ls -p | grep -v /
 
 #GID 100
+A REMPLIR
 
 #Users non affectés
     grep "/bin/sh$\|/bin/csh$" /etc/passwd
