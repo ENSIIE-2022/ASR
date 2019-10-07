@@ -1,4 +1,4 @@
-//Lucas NAVETEUR
+#NAVETEUR Lucas
 
 echo "Mon répertoire de connexion \$HOME est "$HOME
 printf "Le code du caractère * est %d\n" "'*"

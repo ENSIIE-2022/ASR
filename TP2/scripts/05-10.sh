@@ -1,4 +1,6 @@
 #!/bin/bash
+#NAVETEUR Lucas
+
 echo "The date is :"
 echo `date | tee res-05-10.txt` 
 echo "Connected users are :"

@@ -1,3 +1,4 @@
+#NAVETEUR Lucas
 find /dev -type d,p,l,f,s
 
 #Il est possible d'avoir des problèmes de droits, dans ce cas la on rajoute : 2>/dev/null pour rediriger stderr sur le trou noir de linux pour ne pas afficher les erreurs de permissions

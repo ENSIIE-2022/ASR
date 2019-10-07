@@ -1,4 +1,5 @@
-//Lucas NAVETEUR
+#NAVETEUR Lucas
+
 Rajouter ca dans ~/.bashrc, elle fait notre nouveau logout + ancien logout :
 	alias logout='clear;echo "Au revoir...";logout'
 

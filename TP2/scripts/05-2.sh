@@ -1,4 +1,6 @@
 #!/bin/bash
+#NAVETEUR Lucas
+
 LC_ALL=fr_FR.UTF-8
 mkdir results
 for ligne in `cat /etc/dictionaries-common/words`;

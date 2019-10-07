@@ -1,3 +1,4 @@
+#NAVETEUR Lucas
 #affichez les différents types mime :
     grep "^\!:mime" magic | sed -r 's/[!:mime]+//g' | tr -d '[:blank:]' | sort -u
 

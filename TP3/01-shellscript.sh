@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#NAVETEUR Lucas
 #Liste les noms des fichiers de type shellscript dans une arborescence donnée
 #et affiche le nombre de lignes de chaque fichiers
 
