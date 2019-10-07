@@ -35,6 +35,5 @@ A REMPLIR
 #Users non affectés
     grep "/bin/sh$\|/bin/csh$" /etc/passwd
 
-
 #Résultat du 5.2 en une seule ligne
     cat /etc/dictionaries-common/words | cut -c 1 | uniq -c | sort -nr
