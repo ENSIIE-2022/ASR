@@ -5,3 +5,16 @@
     grep "^\!:mime" magic | sed -r 's/[!:mime]+//g' | tr -d '[:blank:]' | sort -u | wc -l
 
 #Je ne comprend pas la question
+
+
+
+##Lucas V (jovenium)##
+	#les dif type mime
+	# les lignes avec :mime qui ne commence pas par # et unique
+	grep ":mime" magic | grep -v "^#" | sort -u
+
+	#nb lignes de mime unique
+	grep ":mime" magic | grep -v "^#" | sort -u | wc -l
+
+##fin Lucas V##
+
