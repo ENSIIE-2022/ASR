@@ -5,3 +5,15 @@ find /dev -mtime 1
 
 
 find /etc -size +10000 -size -20000
+
+
+#Lucas V (jovenium)
+	# -- lister les fichiers sous /dev sans les type bloc ou caractère:
+	# chercher dans dev tout ce qui n'est pas "b"loc ou "c"aractère
+	find /dev ! \( -type b -o -type c \)
+
+	#liste des modif sur /var des 24 dernieres heures
+	find /var -mtime 1
+	
+## fin lucas V ##	
+
