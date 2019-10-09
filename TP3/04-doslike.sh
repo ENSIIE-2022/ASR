@@ -47,11 +47,15 @@ del () {
 
 typ () {
     #Vérification des arguments
-    if [ -z $0 ] || [ ! -z $2 ]; then
+    if [ -z $1 ]; then
         echo "Usage : bash 04-doslike.sh <commande> <arg1> <arg2_opt>"
         exit
     fi
-    echo "typ launched"
+    #Pour chaque variable présentes dans l'ensemble des arguments (A partie du 2, voir le main tout en bas)
+    for var in "$@"
+        do
+            cat $var
+        done
 }
 
 #First argument is command, the rest are options/arguments for functions
