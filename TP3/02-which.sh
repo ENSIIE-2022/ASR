@@ -18,9 +18,13 @@ while [ ! -z $res ]
   do
     #On incrémente la clef de 1 pour prendre la partie de PATH suivante
     i=$((i+1))
+    #On utilise un find pour trouver la commande dans les differents répertoires
     find_res=`find $res -name $argument 2>/dev/null -print -quit`
+    #Si la commande find n'est pas vide, c'est qu'elle à trouver un répertoire dans lequel se trouve la commande
     if [ ! -z $find_res ]; then
+      #Afficher sur la console le résultat le plus rapide obtenu par find pour trouver la commande $argument
       echo $find_res
+      #On peut donc quitter vu qu'on doit afficher la première trouvée
       exit
     fi
     #On change la valeur de res avec la nouvelle partie
