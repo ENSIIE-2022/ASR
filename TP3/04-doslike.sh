@@ -37,7 +37,12 @@ del () {
         echo "Usage : bash 04-doslike.sh <commande> <arg1> <argx_opt>"
         exit
     fi
-    echo "del launched"
+    #Pour chaque variable présentes dans l'ensemble des arguments (A partie du 2, voir le main tout en bas)
+    for var in "$@"
+        do
+            rm $var
+        done
+
 }
 
 typ () {
@@ -64,10 +69,10 @@ case $1 in
         ren $2 $3
         ;;
     del) 
-        del $2 $3 $4 $5
+        del ${@:2}
         ;;
     typ) 
-        typ $2 $3 $4 $5
+        typ ${@:2}
         ;;
     *)
         echo "Usage : bash 04-doslike.sh <commande> <args>"
