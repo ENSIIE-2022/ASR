@@ -28,7 +28,7 @@ ren () {
         echo "Usage : bash 04-doslike.sh <commande> <arg1> <arg2>"
         exit
     fi
-    echo "ren launched"
+    mv $1 $2
 }
 
 del () {
