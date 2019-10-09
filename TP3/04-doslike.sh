@@ -18,7 +18,8 @@ cwd () {
         echo "Usage : bash 04-doslike.sh <commande> <arg1> <arg2_opt>"
         exit
     fi
-    echo "cwd launched"
+    #https://stackoverflow.com/questions/255414/why-doesnt-cd-work-in-a-shell-script
+    cd $1
 }
 
 ren () {
