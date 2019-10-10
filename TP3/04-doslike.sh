@@ -3,7 +3,6 @@
 
 dir () {
     #Pas besoin de vérification des arguments, car entre 0 et +inf
-    i=1
     #Pour chaque variable présentes dans l'ensemble des arguments (A partie du 2, voir le main tout en bas)
     for var in "$@"
         do
