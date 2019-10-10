@@ -10,3 +10,10 @@ Les règles à suivre :
 
 Souvenez vous, la coopération est la clef !
 Bon courage à tous et à toutes ! :)
+
+
+
+### Info du professeur
+e-mail : enseignements@arcoboxe.org
+
+sujet-type : [ISEX]...
