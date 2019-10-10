@@ -36,3 +36,5 @@ step2 () {
 
 step1 $1
 step2 $1 $2
+
+#C'est pas exactement ca mais c'est déjà bien suffisant pour s'entrainer
