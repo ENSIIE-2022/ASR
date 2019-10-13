@@ -1,6 +1,12 @@
 #!/bin/bash
 #NAVETEUR Lucas
 
+#Fonction pour attraper les signaux
+catch_signals(){
+    echo "Signal catched"
+}
+
+
 add_user() {
     #Ajouter -e pour le saut de ligne, le >> indique qu'on AJOUTE du contenu et non que l'on REMPLACE
     echo -e $1 >> $2
@@ -29,6 +35,8 @@ delete_user() {
 		fi
 	fi
 }
+
+trap "catch_signals" 2 3 15
 
 if [[ -z $2 ]]; then
     echo "Usage : bash 10-annuaire.sh <option> <filepath>"
