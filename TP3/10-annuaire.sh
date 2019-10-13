@@ -31,7 +31,7 @@ delete_user() {
 		mv /tmp/ann.$$ $2
 		echo $1 supprime
 		else
-		echo "L'utilisateur $1 n'est pas inscrit"
+		echo "The user $1 is not registered"
 		fi
 	fi
 }
@@ -75,5 +75,7 @@ case $option in
         else
             echo "Usage : bash 10-annuaire.sh <option> <batiment_letter> <filepath>"
         fi;;
-
+    *)  
+        echo "Unknown option, exiting...";
+        exit
 esac
