@@ -76,6 +76,6 @@ case $option in
             echo "Usage : bash 10-annuaire.sh <option> <batiment_letter> <filepath>"
         fi;;
     *)  
-        echo "Unknown option, exiting...";
-        exit
+        echo "Unknown option, exiting..."
+        exit;;
 esac
