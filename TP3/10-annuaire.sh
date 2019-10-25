@@ -1,6 +1,12 @@
 #!/bin/bash
 #NAVETEUR Lucas
 
+#Fonction pour attraper les signaux
+catch_signals(){
+    echo "Signal catched"
+}
+
+
 add_user() {
     #Ajouter -e pour le saut de ligne, le >> indique qu'on AJOUTE du contenu et non que l'on REMPLACE
     echo -e $1 >> $2
@@ -25,10 +31,12 @@ delete_user() {
 		mv /tmp/ann.$$ $2
 		echo $1 supprime
 		else
-		echo "L'utilisateur $1 n'est pas inscrit"
+		echo "The user $1 is not registered"
 		fi
 	fi
 }
+
+trap "catch_signals" 2 3 15
 
 if [[ -z $2 ]]; then
     echo "Usage : bash 10-annuaire.sh <option> <filepath>"
@@ -67,5 +75,7 @@ case $option in
         else
             echo "Usage : bash 10-annuaire.sh <option> <batiment_letter> <filepath>"
         fi;;
-
+    *)  
+        echo "Unknown option, exiting..."
+        exit;;
 esac
