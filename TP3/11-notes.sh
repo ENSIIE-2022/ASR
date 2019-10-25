@@ -25,7 +25,6 @@ while getopts "hl:d:anqp" option
                 echo "   => affichage du calepin complet (p)"
                 echo "   => traitement des notes par contenu (l/exp/ ou d/exp/)"
                 echo "   => traitement des notes par intervalles (lx-y ou dx-y)"
-                echo "   => etc (selon vos désirs)"
                 ;;
             l)
                 echo "--------------- Affichage note ----------------"
