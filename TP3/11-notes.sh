@@ -20,10 +20,15 @@ while getopts "hldanqp" option
             d)
                 echo "--------------- Destruction note ----------------";;
             a)
-                echo "--------------- Ajout de note ----------------";;
+                echo "--------------- Ajout de note ----------------"
+                echo "Quel contenu rajouter ?"
+                read to_add
+                echo "`wc -l $filename | awk '{ print $1+1 }'` - $to_add" >> $filename
+                cat $filename
+                ;;
             n)
                 echo "--------------- Affichage nombre de notes ----------------"
-                echo "Il y a `tail -n 1 notes.txt  | cut -d'-' -f1`notes dans le fichier"
+                echo "Il y a `wc -l $filename | awk '{ print $1 }'` notes dans le fichier"
                 ;;
             q)
                 echo "--------------- Sortie du programme ----------------"

@@ -1,3 +1,4 @@
 1 - Manger le midi
 2 - Manger le soir
 3 - Dormir
+4 - Faire de l'ASR
