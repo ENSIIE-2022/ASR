@@ -9,16 +9,20 @@ fi
 filename="notes.txt"
 touch $filename
 
-while getopts "hldanqp" option
+while getopts "hl:d:anqp" option
     do
-        echo "getopts a trouvé l'option $option"
         case $option in
             h)
                 echo "--------------- Aide en ligne ----------------";;
             l)
-                echo "--------------- Affichage note ----------------";;
+                echo "--------------- Affichage note ----------------"
+                echo `grep ^${OPTARG} $filename`
+                ;;
             d)
-                echo "--------------- Destruction note ----------------";;
+                echo "--------------- Destruction note ----------------"
+                echo "removing the note number ${OPTARG}"
+                sed '/^${OPTARG}/ d $filename'
+                ;;
             a)
                 echo "--------------- Ajout de note ----------------"
                 echo "Quel contenu rajouter ?"
